@@ -1,0 +1,11 @@
+#cloud-config
+
+packages:
+  - git
+  - make
+  - gcc
+  - wget
+
+runcmd:
+  - cd / && git clone https://github.com/valkey-io/valkey.git --depth 1 && cd /valkey && make
+  - cd / && wget https://download.redis.io/redis-stable.tar.gz && tar -xzvf redis-stable.tar.gz && cd redis-stable && make
