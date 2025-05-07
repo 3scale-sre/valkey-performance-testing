@@ -1,5 +1,5 @@
 module "ec2_labels" {
-  source      = "git@github.com:3scale-ops/tf-aws-label.git?ref=tags/0.1.2"
+  source      = "git@github.com:3scale-sre/tf-aws-label.git?ref=tags/0.1.2"
   environment = local.environment
   project     = local.project
   workload    = local.workload
